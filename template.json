@@ -1,0 +1,11 @@
+{
+  "task": {
+    "program": ["main.rs", ["{tasklabel}.rs"]],
+    "submit": "{tasklabel}.rs",
+    "testdir": "tests_{tasklabel}"
+  },
+  "contest": {
+    "static": [["toml", "Cargo.toml"], ["lock"," Cargo.lock"]],
+    "cmd": "cargo build --workspace -j 8"
+  }
+}
