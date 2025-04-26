@@ -1,11 +1,13 @@
 {
-  "task": {
-    "program": [["main.rs", "{tasklabel}.rs"]],
-    "submit": "{tasklabel}.rs",
-    "testdir": "tests_{tasklabel}"
-  },
-  "contest": {
-    "static": ["Cargo.toml","Cargo.lock"],
-    "cmd": "cargo build --workspace -j 8"
-  }
+    "task": {
+        "program": [["main.rs", "src/{tasklabel}.rs"]],
+        "submit": "src/{tasklabel}.rs",
+        "testdir": "testcases/{tasklabel}"
+    },
+    "contest": {
+        "static": [
+            ["Cargo.toml", "Cargo.toml"],
+            ["Cargo.lock", "Cargo.lock"]
+        ]
+    }
 }
